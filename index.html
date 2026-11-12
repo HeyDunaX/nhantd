@@ -27,7 +27,7 @@
             <div class="bio-wrapper">
                 <h1>Nhan Duy Tran</h1>
                 <div class="role-tag">Research Collaborator @ <a href="https://ura.hcmut.edu.vn/" target="_blank" rel="noopener">URA Research Group, HCMUT</a></div>
-                <p>I am a second-year Information Technology student at the Posts and Telecommunications Institute of Technology (PTIT).</p>
+                <p>I am a second-year Information Technology student at the <a href="https://ptit.edu.vn/" target="_blank" rel="noopener">Posts and Telecommunications Institute of Technology (PTIT)</a>.</p>
                 <p>My research focuses on neural machine translation for morphologically rich languages, low-resource languages, and ethnic minority languages.</p>
                 <div class="social-links">
                     <a href="https://scholar.google.com/citations?user=SgZL230AAAAJ&amp;hl=vi" target="_blank" rel="noopener">Google Scholar</a>
@@ -54,10 +54,12 @@
             </ul>
 
             <section-title>News</section-title>
-            <ul class="news-list">
-                <li><b>[OCT 2026]</b> Our paper <strong><i>Mind the Morphology: Morphology-Aware Tokenizer Adaptation under Constrained Fine-Tuning</i></strong> was accepted to SOICT 2026 and will appear in the Springer CCIS proceedings.</li>
-                <li><b>[JAN 2026]</b> Our paper <strong><i>Not All Data Augmentation Works: A Typology-Aware Study for Low-Resource Neural Machine Translation in Vietnamese Ethnic Minority Languages</i></strong> was accepted to the AAAI 2026 Workshop on Language Models for Under-Represented Communities (LM4UC).</li>
-            </ul>
+            <div class="news-scroller at-top at-bottom">
+                <ul class="news-list">
+                    <li><b>[OCT 2026]</b> Our paper <strong><i>Mind the Morphology: Morphology-Aware Tokenizer Adaptation under Constrained Fine-Tuning</i></strong> was accepted to SOICT 2026 and will appear in the Springer CCIS proceedings.</li>
+                    <li><b>[JAN 2026]</b> Our paper <strong><i>Not All Data Augmentation Works: A Typology-Aware Study for Low-Resource Neural Machine Translation in Vietnamese Ethnic Minority Languages</i></strong> was accepted to the AAAI 2026 Workshop on Language Models for Under-Represented Communities (LM4UC).</li>
+                </ul>
+            </div>
 
             <section-title>Contact</section-title>
             <p>Posts and Telecommunications Institute of Technology<br>
@@ -72,13 +74,13 @@
             <div class="pub-card">
                 <span class="pub-title">Mind the Morphology: Morphology-Aware Tokenizer Adaptation under Constrained Fine-Tuning</span>
                 <span class="pub-venue">SOICT 2026 · Oral Presentation · Springer CCIS Proceedings</span><br>
-                <b>Nhan Tran</b>, Hung To and Hai Nguyen Thi Tuyet<br>
+                <span class="author-me">Nhan Tran</span>, Hung To and Hai Nguyen Thi Tuyet<br>
                 [<a href="./proj/morphel.html">website</a>] [<a href="https://github.com/HeyDunaX/MorpheL" target="_blank" rel="noopener">code</a>]
             </div>
             <div class="pub-card">
                 <span class="pub-title">Not All Data Augmentation Works: A Typology-Aware Study for Low-Resource Neural Machine Translation in Vietnamese Ethnic Minority Languages</span>
                 <span class="pub-venue">AAAI 2026 Workshop · LM4UC</span><br>
-                Long Nguyen, Dat T. Truong, <b>Nhan D. Tran</b>, Quynh Vo, Quy Tran Nguyen and Tho Quan<br>
+                Long Nguyen, Dat T. Truong, <span class="author-me">Nhan D. Tran</span>, Quynh Vo, Quy Tran Nguyen and Tho Quan<br>
                 [<a href="https://openreview.net/forum?id=XziOk4BTfv#discussion" target="_blank" rel="noopener">paper</a>]
             </div>
         </div>
@@ -145,6 +147,18 @@
         function topFunction() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        const newsScroller = document.querySelector('.news-scroller');
+        function updateNewsFade() {
+            if (!newsScroller) return;
+            const isScrollable = newsScroller.scrollHeight > newsScroller.clientHeight + 1;
+            newsScroller.classList.toggle('is-scrollable', isScrollable);
+            newsScroller.classList.toggle('at-top', newsScroller.scrollTop <= 1);
+            newsScroller.classList.toggle('at-bottom', newsScroller.scrollTop + newsScroller.clientHeight >= newsScroller.scrollHeight - 1);
+        }
+        newsScroller?.addEventListener('scroll', updateNewsFade, { passive: true });
+        window.addEventListener('resize', updateNewsFade);
+        updateNewsFade();
 
         const themeToggle = document.getElementById('theme-toggle');
         const sunIcon = document.getElementById('sun-icon');
