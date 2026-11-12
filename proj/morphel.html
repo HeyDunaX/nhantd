@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MorpheL: Morphology-Aware Tokenizer Adaptation under Constrained Fine-Tuning.">
+    <title>MorpheL | Nhan Tran</title>
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <style>
+        .inline-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12em; fill: currentColor; }
+        .home-icon { width: 1.2em; height: 1.2em; vertical-align: -0.18em; }
+        #theme-toggle { position: fixed; top: 1rem; right: 1.25rem; z-index: 30; border: 0; background: transparent; color: inherit; cursor: pointer; padding: .5rem; }
+        #theme-toggle svg { display: block; }
+        html[data-theme="dark"] body { background: #17191c; color: #e6e8eb; }
+        html[data-theme="dark"] .navbar { background: #202328; }
+        html[data-theme="dark"] .navbar-item, html[data-theme="dark"] .navbar-link { color: #e6e8eb; }
+        html[data-theme="dark"] .hero, html[data-theme="dark"] .section { background: #17191c; color: #e6e8eb; }
+        html[data-theme="dark"] .title, html[data-theme="dark"] .content, html[data-theme="dark"] .publication-authors { color: #e6e8eb; }
+        html[data-theme="dark"] .box, html[data-theme="dark"] .notification.is-light { background: #24282e; color: #e6e8eb; }
+        html[data-theme="dark"] .table { background: #24282e; color: #e6e8eb; }
+        html[data-theme="dark"] .table thead th, html[data-theme="dark"] .table td { color: #e6e8eb; border-color: #41464d; }
+        html[data-theme="dark"] .footer { background: #202328; color: #c7cbd1; }
+        html[data-theme="dark"] a { color: #8fc7ff; }
+        @media (max-width: 768px) {
+            .navbar-menu { display: block !important; box-shadow: none; padding: 0; }
+            .navbar-start { justify-content: center !important; }
+            .navbar-item { padding: .55rem .75rem; }
+            .hero .title.publication-title { font-size: 1.55rem; line-height: 1.25; }
+            .publication-authors { font-size: .95rem !important; line-height: 1.45; }
+            .section { padding-left: 1rem; padding-right: 1rem; }
+            .table { font-size: .84rem; }
+        }
+        @media (max-width: 480px) {
+            .hero-body { padding: 2rem 1rem; }
+            .hero .title.publication-title { font-size: 1.3rem; }
+            .publication-links .button { margin: .2rem; }
+            .box { padding: 1rem; }
+            .table { font-size: .76rem; }
+            .table th, .table td { padding: .5rem .35rem; }
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+        <svg id="sun-icon" style="display:none" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg id="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../index.html" aria-label="Back to profile">
+                <span class="icon" aria-hidden="true"><svg class="inline-icon home-icon" viewBox="0 0 24 24"><path d="M3 10.8 12 3l9 7.8v9.2a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1v-9.2Zm2 1v7.2h2.5v-6h9v6H19v-7.2l-7-6.07L5 11.8Z"/></svg></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <a class="navbar-item" href="./morphel.html"><b>MorpheL</b></a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-2 publication-title">Mind the Morphology: Morphology-Aware Tokenizer Adaptation under Constrained Fine-Tuning</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><b>Nhan Tran</b>, Hung To and Hai Nguyen Thi Tuyet</span>
+                        </div>
+                        <div class="is-size-5 publication-authors"><span class="author-block"><b>Posts and Telecommunications Institute of Technology</b></span></div>
+                        <div class="is-size-5 publication-authors"><span class="author-block">SOICT 2026 · Oral Presentation · Springer CCIS Proceedings</span></div>
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block"><a href="https://github.com/HeyDunaX/MorpheL" class="external-link button is-normal is-rounded is-dark" target="_blank" rel="noopener"><span class="icon" aria-hidden="true"><svg class="inline-icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.18-3.37-1.18-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.55 9.55 0 0 1 12 7.99c.85 0 1.71.12 2.51.37 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></span><span>Code</span></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <div class="notification is-light has-text-centered">
+                <p class="title is-4 mb-2">Why this matters</p>
+                <p>Tokenizers are often treated as fixed preprocessing. MorpheL makes tokenizer adaptation morphology-aware, helping multilingual models reuse meaningful pieces across inflected and derived word forms when the model cannot fully fine-tune.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">Research at a glance</h2>
+            <div class="columns is-multiline has-text-centered">
+                <div class="column is-one-third"><div class="box"><p class="title is-2 has-text-primary">6</p><p>XNLI languages evaluated</p></div></div>
+                <div class="column is-one-third"><div class="box"><p class="title is-2 has-text-primary">4–8%</p><p>lower fragmentation vs. WordPiece</p></div></div>
+                <div class="column is-one-third"><div class="box"><p class="title is-2 has-text-primary">16.24</p><p>English–Turkish BLEU</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <h2 class="title is-3">The contribution</h2>
+                    <div class="content">
+                        <ul>
+                            <li><b>Morpheme-aware adaptation without annotations:</b> MorpheL uses language-specific candidate positions and corpus-level Mutual Information, without gold morpheme boundaries or an external morphological analyzer.</li>
+                            <li><b>Controlled adaptation:</b> The study isolates tokenizer quality across classifier-only, embeddings-plus-classifier, and full fine-tuning regimes using the same XLM-R backbone and 32K vocabulary budget.</li>
+                            <li><b>Beyond classification:</b> An English–Turkish OPUS-100 experiment tests whether the tokenizer transfers to neural machine translation.</li>
+                            <li><b>Reproducible research:</b> The implementation, configurations, and reproducibility artifacts are publicly available.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">Where MorpheL helps most</h2>
+            <div class="table-container">
+                <table class="table is-fullwidth is-hoverable">
+                    <thead><tr><th>Language</th><th>Accuracy gain</th><th>Macro-F1 gain</th><th>Setting</th></tr></thead>
+                    <tbody>
+                        <tr><td><b>Turkish</b></td><td>+1.27</td><td><b>+2.80</b></td><td>Constrained adaptation</td></tr>
+                        <tr><td><b>Swahili</b></td><td>+0.49</td><td><b>+3.01</b></td><td>Constrained adaptation</td></tr>
+                        <tr><td><b>Russian</b></td><td>+0.47</td><td><b>+1.23</b></td><td>Constrained adaptation</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="has-text-centered is-size-6">The strongest gains concentrate in morphologically richer languages, especially when the encoder has limited room to adapt.</p>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <div class="columns">
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <h3 class="title is-4">Machine translation</h3>
+                        <p class="title is-2 has-text-primary mb-2">16.24 BLEU</p>
+                        <p>Highest English–Turkish BLEU on OPUS-100 among BPE, WordPiece, Unigram, and MorpheL.</p>
+                        <p class="mt-3"><b>+1.20</b> over BPE · <b>+3.53</b> over WordPiece · <b>+1.08</b> over Unigram</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-text-centered">
+                        <h3 class="title is-4">Mechanism evidence</h3>
+                        <p class="title is-2 has-text-primary mb-2">35.95 → 36.04</p>
+                        <p>On Turkish, MI-guided selection rises far above random boundaries in Macro-F1; the full configuration adds the final improvement.</p>
+                        <p class="mt-3"><b>31.93</b> random boundaries · <b>35.95</b> MI-only · <b>36.04</b> full MorpheL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <div class="content has-text-centered">
+                <p><b>Takeaway:</b> MorpheL shows that tokenizer design can be an actionable lever for low-resource multilingual adaptation—especially for morphologically rich languages under constrained fine-tuning.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container has-text-centered"><p>MorpheL · Nhan Tran · <a href="../index.html">Back to profile</a></p></div></footer>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        if (localStorage.getItem('paper-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        function updateThemeIcon() {
+            const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+            sunIcon.style.display = dark ? 'block' : 'none';
+            moonIcon.style.display = dark ? 'none' : 'block';
+        }
+        updateThemeIcon();
+        themeToggle.addEventListener('click', () => {
+            const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (dark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('paper-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('paper-theme', 'dark');
+            }
+            updateThemeIcon();
+        });
+    </script>
+</body>
+</html>

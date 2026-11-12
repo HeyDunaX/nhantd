@@ -1,526 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KWZSG6PHY8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-KWZSG6PHY8');
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const isExternal = link =>
-                link.hostname && link.hostname !== location.hostname;
-
-            document.querySelectorAll('a[href]').forEach(link => {
-                if (isExternal(link)) {
-                    link.target = '_blank';
-                    link.rel = 'noopener noreferrer';
-                }
-            });
-        });
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chen Zhang - NII</title>
-    <meta name="description" content="Chen Zhang is a Project Researcher at NII specializing in NLP and LLMs.">
-    <meta name="keywords" content="Chen Zhang, NLP, LLM, Low-Resource Languages, 张晨, Peking University, NII">
-
+    <title>Nhan Tran - Research Portfolio</title>
+    <meta name="description" content="Nhan Tran is a second-year Information Technology student researching neural machine translation for morphologically rich and low-resource languages.">
+    <meta name="keywords" content="Nhan Tran, Nhan Duy Tran, neural machine translation, morphology, low-resource languages, PTIT">
     <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="./stylesheet.css">
 </head>
-
 <body>
-
     <button onclick="topFunction()" id="backToTop" title="Go to top">
-        <svg viewBox="0 0 24 24">
-            <polyline points="18 15 12 9 6 15"></polyline>
-        </svg>
+        <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"></polyline></svg>
     </button>
 
     <div id="container">
-        <button id="theme-toggle" title="切换深色/浅色模式">
-        <svg id="sun-icon" style="display:none;" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-        <svg id="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    </button>
-
+        <button id="theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+            <svg id="sun-icon" style="display:none" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg id="moon-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
         <header class="profile-section">
             <div class="portrait-wrapper">
-                <img src="./files/portrait-2025.jpg" alt="Chen Zhang" class="portrait">
+                <img src="./files/portrait-studio.png" alt="Nhan Tran" class="portrait">
             </div>
             <div class="bio-wrapper">
-                <h1>Chen Zhang 张晨</h1>
-                <div class="role-tag">Project Researcher @ <a
-                        href="https://llmc.nii.ac.jp/en/" target="_blank">LLMC, NII</a></div>
-                <p>I obtained my Ph.D. degree in Wangxuan Institute of Computer Technology, Peking University, advised by <a
-                        href="https://yansongfeng.github.io/" target="_blank">Prof. Yansong Feng</a> in 2026.</p>
-
-                <p>My research aims to make LLMs more inclusive and intelligent across diverse human
-                    languages.</p>
-
+                <h1>Nhan Duy Tran</h1>
+                <div class="role-tag">Second-year Information Technology Student @ <a href="https://ptit.edu.vn/" target="_blank" rel="noopener">Posts and Telecommunications Institute of Technology</a></div>
+                <p>I am a second-year Information Technology student at the Posts and Telecommunications Institute of Technology (PTIT).</p>
+                <p>My research focuses on neural machine translation for morphologically rich languages, low-resource languages, and ethnic minority languages.</p>
                 <div class="social-links">
-                    <a href="./files/cv/CV_Chen_Zhang_2026.pdf" target="_blank">CV</a>
-                    <a href="https://scholar.google.com/citations?user=NSFlB88AAAAJ" target="_blank">Google Scholar</a>
-                    <a href="https://github.com/luciusssss" target="_blank">GitHub</a>
-                    <a href="https://x.com/chenzhang_zc" target="_blank">X</a>
+                    <a href="https://scholar.google.com/citations?user=SgZL230AAAAJ&amp;hl=vi" target="_blank" rel="noopener">Google Scholar</a>
+                    <a href="https://github.com/HeyDunaX" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/tranduynhan/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://orcid.org/0009-0001-0243-3550" target="_blank" rel="noopener">ORCID</a>
                 </div>
             </div>
         </header>
-
-        <!-- <div class="hiring-box">
-            <b>I am currently seeking postdoctoral opportunities.</b> If you are interested in my profile, please feel
-            free to reach out!
-        </div> -->
 
         <nav class="tabs-nav">
             <button class="tab-btn active" onclick="openTab(event, 'research')">Overview</button>
             <button class="tab-btn" onclick="openTab(event, 'publications')">Publications</button>
             <button class="tab-btn" onclick="openTab(event, 'activities')">Activities</button>
-            <button class="tab-btn" onclick="openTab(event, 'misc')">Miscellaneous</button>
         </nav>
 
         <div id="research" class="tab-content active">
             <section-title>Research Interests</section-title>
             <ul>
-                <li><b>NLP for Low-Resource Languages:</b> Enhancing the transparency, inclusivity, efficiency, and cultural awareness of language technologies for underrepresented languages.</li>
-                <li><b>Multilinguality in LLMs:</b> Investigating the emergence of multilingual capabilities in LLMs and understanding cross-lingual interactions and transfer mechanisms.</li>
-                <li><b>LLMs for Language Science:</b> Leveraging the metalinguistic abilities of LLMs to analyze phenomena such as language contact and acquisition, for insights into how human languages function and evolve.</li>
-                <!-- <li><b>Trustworthy and Socially Beneficial LLMs:</b> Developing robust reasoning capabilities in LLMs to build reliable systems that are aligned with the needs of diverse communities.</li> -->
+                <li><b>Neural Machine Translation:</b> Building and evaluating translation systems for languages with limited supervision.</li>
+                <li><b>Morphology-Aware NLP:</b> Understanding how morphological structure can improve tokenization and model adaptation.</li>
+                <li><b>Low-Resource and Ethnic Minority Languages:</b> Developing inclusive language technologies for Vietnamese ethnic minority communities.</li>
             </ul>
-
 
             <section-title>News</section-title>
             <ul class="news-list">
-                <li><b>[SEP 2026]</b> <a href="https://arxiv.org/pdf/2604.02596">Our paper</a> on many-shot translation is accepted to AACL-IJCNLP 2026. </li>
-                <li><b>[JUL 2026]</b> Obtained a PhD degree from Peking University! 🎓</li>
-                <li><b>[APR 2026]</b> Our paper on logit fusion for low-resource languages is accepted to ACL 2026.</li>
-                <li><b>[JAN 2026]</b> The Mongolian script subset of our <a href="https://aclanthology.org/2025.findings-acl.578.pdf">MiLiC-Eval</a> has been officially integrated into <a href="https://huggingface.co/datasets/openlanguagedata/flores_plus">FLORES+</a>.</li>
-                <!-- <li><b>[NOV 2025]</b> Involved in organizing the <a href="https://winlp-workshop.github.io/">WiNLP 2025 workshop</a> at EMNLP 2025.</li>-->
-                <!-- <li><b>[MAY 2025]</b> Our papers on low-resource languages are accepted to ACL 2025.</li> -->
-                <!-- <li><b>[MAR 2025]</b> Released <a href="https://arxiv.org/pdf/2503.01150">MiLiC-Eval</a>, an NLP evaluation suite for China's minority languages.</li> -->
+                <li><b>[OCT 2026]</b> Our paper <i>Mind the Morphology: Morphology-Aware Tokenizer Adaptation under Constrained Fine-Tuning</i> was accepted to SOICT 2026 and will appear in the Springer CCIS proceedings.</li>
+                <li><b>[JAN 2026]</b> Our paper <i>Not All Data Augmentation Works: A Typology-Aware Study for Low-Resource Neural Machine Translation in Vietnamese Ethnic Minority Languages</i> was accepted to the AAAI 2026 Workshop on Language Models for Under-Represented Communities (LM4UC).</li>
             </ul>
 
             <section-title>Contact</section-title>
-            National Institute of Informatics Research and Development Center for Large Language Models <br>
-            Palace Side Building 3F, 1-1-1 Hitotsubashi, Chiyoda-ku, Tokyo 〒100-0003 <br>
-            <div class="email-tag">zhangchen [at] nii [dot] ac [dot] jp</div>
+            <p>Posts and Telecommunications Institute of Technology<br>
+                <span class="email-tag">nhantd [at] stu [dot] ptit [dot] edu [dot] vn</span><br>
+                <span class="email-tag">nhantd [at] rs [dot] gmail [dot] com</span>
+            </p>
         </div>
 
         <div id="publications" class="tab-content">
-            <p style="font-size: 1rem; color: var(--text-light); margin-bottom: 20px;">
-                Including preprints. * denotes equal contribution.
-                <br>
-                Following the <a
-                    href="https://thegradient.pub/the-benderrule-on-naming-the-languages-we-study-and-why-it-matters/"
-                    target="_blank">#BenderRule</a>, languages are specified for each work.
-            </p>
-
+            <p style="font-size: 1rem; color: var(--text-light); margin-bottom: 20px;">* denotes equal contribution.</p>
             <span class="year-tag">2026</span>
-
             <div class="pub-card">
-                <span class="pub-title">Typological Feature Induction as a Benchmark for Inductive Metalinguistic Reasoning</span>
-                <span class="pub-venue">arXiv 2611.04421</span><br>
-                <span class="author-me">Chen Zhang</span>*, Seth Aycock*, Yusuke Miyao <br>
-                [<a href="https://arxiv.org/abs/2611.04421">preprint</a>]<br>
-                <span class="lang-info">195 languages</span>
+                <span class="pub-title">Mind the Morphology: Morphology-Aware Tokenizer Adaptation under Constrained Fine-Tuning</span>
+                <span class="pub-venue">SOICT 2026 · Oral Presentation · Springer CCIS Proceedings</span><br>
+                <b>Nhan Tran</b>, Hung To and Hai Nguyen Thi Tuyet<br>
+                [<a href="./proj/morphel.html">website</a>] [<a href="https://github.com/HeyDunaX/MorpheL" target="_blank" rel="noopener">code</a>]
             </div>
-
             <div class="pub-card">
-                <span class="pub-title">To Reason or to Fabricate: Reasoning Without Shortcuts via Hint-Anchored Pairwise Aggregation</span>
-                <span class="pub-venue">arXiv 2606.29481</span><br>
-                Jiuheng Lin, <span class="author-me">Chen Zhang</span>, Yansong Feng <br>
-                [<a href="https://arxiv.org/pdf/2606.29481">preprint</a>]<br>
-                <span class="lang-info">English</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">An Empirical Study of Many-Shot In-Context Learning for Machine Translation of Low-Resource Languages</span>
-                <span class="pub-venue">AACL-IJCNLP 2026 (Findings)</span><br>
-                Yinhan Lu, Gaganpreet Jhajj, <span class="author-me">Chen Zhang</span>, Anietie Andy, David Ifeoluwa Adelani <br>
-                [<a href="https://aclanthology.org/2026.findings-aacl.142/">paper</a>]<br>
-                <span class="lang-info">Anaang, Efik, Ibibio, Oro, Sudanese Arabic, Emakhuwa, Ladin, Mauritian Creole, Tamazight, Quechua</span>
-            </div>
-
-
-            <div class="pub-card">
-                <span class="pub-title">Efficient Low-Resource Language Adaptation via Multi-Source Dynamic Logit Fusion</span>
-                <span class="pub-venue">ACL 2026</span><br>
-                <span class="author-me">Chen Zhang</span>, Jiuheng Lin, Zhiyuan Liao, Yansong Feng <br>
-                [<a href="https://aclanthology.org/2026.acl-long.207/">paper</a>] [<a href="https://github.com/luciusssss/TriMix">code</a>]<br>
-                <span class="lang-info">Uyghur, Tibetan, Mongolian, Kazakh, Odia, Telugu, Tamil, Bengali</span>
-            </div>
-
-            
-            <span class="year-tag">2025</span>
-
-            <div class="pub-card">
-                <span class="pub-title">Read it in Two Steps: Translating Extremely Low-Resource Languages with
-                    Code-Augmented Grammar Books</span>
-                <span class="pub-venue">ACL 2025</span><br>
-                <span class="author-me">Chen Zhang</span>*, Jiuheng Lin*, Xiao Liu, Zekai Zhang, Yansong Feng <br>
-                [<a href="https://aclanthology.org/2025.acl-long.202/">paper</a>] [<a
-                    href="https://github.com/Infinite-set/ZhuangRules">code</a>] <br>
-                <span class="lang-info">Zhuang, Kalamang</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">Cross-Lingual Transfer of Cultural Knowledge: An Asymmetric Phenomenon</span>
-                <span class="pub-venue">ACL 2025</span><br>
-                <span class="author-me">Chen Zhang</span>, Zhiyuan Liao, Yansong Feng <br>
-                [<a href="https://aclanthology.org/2025.acl-short.13/">paper</a>] [<a
-                    href="https://github.com/luciusssss/cross-lingual-culture">code</a>] <br>
-                <span class="lang-info">English, Chinese, Korean, Tibetan, Mongolian</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">MiLiC-Eval: Benchmarking Multilingual LLMs for China's Minority Languages</span>
-                <span class="pub-venue">ACL 2025 (Findings)</span><br>
-                <span class="author-me">Chen Zhang</span>, Mingxu Tao, Zhiyuan Liao, Yansong Feng <br>
-                [<a href="https://aclanthology.org/2025.findings-acl.578.pdf">paper</a>] [<a
-                    href="https://github.com/luciusssss/MiLiC-Eval">code</a>] [<a
-                    href="https://huggingface.co/datasets/pkupie/milic-eval">huggingface</a>] <br>
-                <span class="lang-info">Tibetan, Uyghur, Kazakh, Mongolian</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">Eliciting and Improving the Causal Reasoning Abilities of Large Language Models
-                    with Conditional Statements</span>
-                <span class="pub-venue">Computational Linguistics 2025</span><br>
-                Xiao Liu, Da Yin, <span class="author-me">Chen Zhang</span>, Yansong Feng, Dongyan Zhao <br>
-                [<a
-                    href="https://direct.mit.edu/coli/article/doi/10.1162/coli_a_00548/127461/Eliciting-and-Improving-the-Causal-Reasoning">paper</a>]
-                <br>
-                <span class="lang-info">English</span>
-            </div>
-
-            <span class="year-tag">2024</span>
-
-            <div class="pub-card">
-                <span class="pub-title">Unlocking the Potential of Model Merging for Low-Resource Languages</span>
-                <span class="pub-venue">EMNLP 2024 (Findings)</span><br>
-                Mingxu Tao*, <span class="author-me">Chen Zhang</span>*, Quzhe Huang*, Tianyao Ma, Songfang Huang,
-                Dongyan Zhao, Yansong Feng <br>
-                [<a href="https://aclanthology.org/2024.findings-emnlp.508.pdf">paper</a>] [<a
-                    href="https://huggingface.co/collections/pkupie/model-merging-for-lrl-67526669adff082eb0c75a4b">huggingface</a>]
-                <br>
-                <span class="lang-info">Tibetan, Uyghur, Mongolian, Tamil, Telugu, Odia, Bengali</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">Teaching Large Language Models an Unseen Language on the Fly</span>
-                <span class="pub-venue">ACL 2024 (Findings)</span><br>
-                <span class="author-me">Chen Zhang</span>, Xiao Liu, Jiuheng Lin, Yansong Feng <br>
-                [<a href="https://aclanthology.org/2024.findings-acl.519.pdf">paper</a>] [<a
-                    href="https://github.com/luciusssss/ZhuangBench">code</a>] [<a
-                    href="https://luciusssss.github.io/proj/zhuangbench.html">website</a>] <br>
-                <span class="lang-info">Zhuang, Kalamang, and other 7 mid-resource languages</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">MC<sup>2</sup>: Towards Transparent and Culturally-Aware NLP for Minority
-                    Languages in China</span>
-                <span class="pub-venue">ACL 2024</span><br>
-                <span class="author-me">Chen Zhang</span>*, Mingxu Tao*, Quzhe Huang*, Jiuheng Lin*, Zhibin Chen,
-                Yansong Feng <br>
-                [<a href="https://aclanthology.org/2024.acl-long.479.pdf">paper</a>] [<a
-                    href="https://github.com/luciusssss/mc2_corpus">code</a>] [<a
-                    href="https://luciusssss.github.io/proj/mc2.html">website</a>] <br>
-                <span class="lang-info">Tibetan, Uyghur, Kazakh, Mongolian</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">Harder Task Needs More Experts: Dynamic Routing in MoE Models</span>
-                <span class="pub-venue">ACL 2024</span><br>
-                Quzhe Huang*, Zhenwei An*, Nan Zhuang, Mingxu Tao, <span class="author-me">Chen Zhang</span>, Yang Jin,
-                Kun Xu, Kun Xu, Liwei Chen, Songfang Huang, Yansong Feng <br>
-                [<a href="https://aclanthology.org/2024.acl-long.696.pdf">paper</a>] <br>
-                <span class="lang-info">English</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">Can LLMs Learn a New Language on the Fly? A Case Study on Zhuang</span>
-                <span class="pub-venue">ICLR 2024 Tiny Paper</span><br>
-                <span class="author-me">Chen Zhang</span>, Mingxu Tao, Quzhe Huang, Zhibin Chen, Yansong Feng <br>
-                [<a href="https://openreview.net/pdf?id=GTHD2UnDIb">paper</a>] <br>
-                <span class="lang-info">Zhuang</span>
-            </div>
-
-
-            <div class="pub-card">
-                <span class="pub-title">Can Perplexity Reflect Large Language Model's Ability in Long Text
-                    Understanding?</span>
-                <span class="pub-venue">ICLR 2024 Tiny Paper</span><br>
-                Yutong Hu, Quzhe Huang, Mingxu Tao, <span class="author-me">Chen Zhang</span>, Yansong Feng<br>
-                [<a href="https://openreview.net/pdf?id=Cjp6YKVeAa">paper</a>] <br>
-                <span class="lang-info">English</span>
-            </div>
-
-            <span class="year-tag">2023</span>
-
-            <div class="pub-card">
-                <span class="pub-title">Lawyer LLaMA: Enhancing LLMs with Legal Knowledge</span>
-                <span class="pub-venue">arXiv 2305.15062</span><br>
-                Quzhe Huang*, Mingxu Tao*, <span class="author-me">Chen Zhang</span>*, Zhenwei An*, Cong Jiang, Zhibin
-                Chen, Zirui Wu, Yansong Feng <br>
-                [<a href="https://arxiv.org/pdf/2305.15062.pdf">preprint</a>] [<a
-                    href="https://github.com/AndrewZhe/lawyer-llama">code</a>] <br>
-                <span class="lang-info">Chinese</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">How Many Answers Should I Give? An Empirical Study of Multi-Answer Reading
-                    Comprehension</span>
-                <span class="pub-venue">ACL 2023 (Findings)</span><br>
-                <span class="author-me">Chen Zhang</span>, Jiuheng Lin, Xiao Liu, Yuxuan Lai, Yansong Feng, Dongyan Zhao
-                <br>
-                [<a href="https://aclanthology.org/2023.findings-acl.359.pdf">paper</a>] [<a
-                    href="https://github.com/luciusssss/how-many-answers">code</a>] <br>
-                <span class="lang-info">English</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">The Magic of IF: Investigating Causal Reasoning Abilities in Large Language
-                    Models of Code</span>
-                <span class="pub-venue">ACL 2023 (Findings)</span><br>
-                Xiao Liu, Da Yin, <span class="author-me">Chen Zhang</span>, Yansong Feng, Dongyan Zhao
-                <br>
-                [<a href="https://aclanthology.org/2023.findings-acl.574.pdf">paper</a>] [<a
-                    href="https://github.com/xxxiaol/magic-if">code</a>] <br>
-                <span class="lang-info">English</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">Relation-Aware Question Answering for Heterogeneous Knowledge Graphs</span>
-                <span class="pub-venue">EMNLP 2023 (Findings)</span><br>
-                Haowei Du, Quzhe Huang, Chen Li, <span class="author-me">Chen Zhang</span>, Yang Li, Dongyan Zhao
-                <br>
-                [<a href="https://aclanthology.org/2023.findings-emnlp.906.pdf">paper</a>] <br>
-                <span class="lang-info">English</span>
-            </div>
-
-
-            <div class="pub-card">
-                <span class="pub-title">Cross-Lingual Question Answering over Knowledge Base as Reading
-                    Comprehension</span>
-                <span class="pub-venue">EACL 2023 (Findings)</span><br>
-                <span class="author-me">Chen Zhang</span>, Yuxuan Lai, Yansong Feng, Xingyu Shen, Haowei Du, Dongyan
-                Zhao <br>
-                [<a href="https://aclanthology.org/2023.findings-eacl.185.pdf">paper</a>] [<a
-                    href="https://github.com/luciusssss/xkbqa-as-mrc">code</a>] <br>
-                <span class="lang-info">Chinese, Persian, German, Romanian, Italian, Russian, French, Dutch, Spanish,
-                    Hindi, Portuguese</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">UnifEE: Unified Evidence Extraction for Fact Verification</span>
-                <span class="pub-venue">EACL 2023</span><br>
-                Nan Hu, Zirui Wu, Yuxuan Lai, <span class="author-me">Chen Zhang</span>, Yansong Feng <br>
-                [<a href="https://aclanthology.org/2023.eacl-main.82.pdf">paper</a>] [<a
-                    href="https://github.com/WilliamZR/unifee">code</a>] <br>
-                <span class="lang-info">English</span>
-            </div>
-
-            <span class="year-tag">2022 and before</span>
-
-
-            <div class="pub-card">
-                <span class="pub-title">Knowledge-Enhanced Iterative Instruction Generation and Reasoning for Knowledge
-                    Base Question Answering</span>
-                <span class="pub-venue">NLPCC 2022</span><br>
-                Haowei Du, Quzhe Huang, <span class="author-me">Chen Zhang</span>, Dongyan Zhao<br>
-                [<a href="https://link.springer.com/chapter/10.1007/978-3-031-17120-8_34">paper</a>] [<a
-                    href="https://arxiv.org/pdf/2209.03005.pdf">preprint</a>]
-                <span class="lang-info">English</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">Extract, Integrate, Compete: Towards Verification Style Reading
-                    Comprehension</span>
-                <span class="pub-venue">EMNLP 2021 (Findings)</span><br>
-                <span class="author-me">Chen Zhang</span>, Yuxuan Lai, Yansong Feng, Dongyan Zhao <br>
-                [<a href="https://aclanthology.org/2021.findings-emnlp.255.pdf">paper</a>] [<a
-                    href="https://github.com/luciusssss/VGaokao">code</a>] <br>
-                <span class="lang-info">Chinese</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">A review of deep learning in question answering over knowledge bases</span>
-                <span class="pub-venue">AI Open 2021, Volume 2</span><br>
-                <span class="author-me">Chen Zhang</span>, Yuxuan Lai, Yansong Feng, Dongyan Zhao <br>
-                [<a href="https://www.sciencedirect.com/science/article/pii/S2666651021000292">paper</a>] <br>
-                <span class="lang-info">English</span>
-            </div>
-
-            <div class="pub-card">
-                <span class="pub-title">Why Machine Reading Comprehension Models Learn Shortcuts?</span>
-                <span class="pub-venue">ACL-IJCNLP 2021 (Findings)</span><br>
-                Yuxuan Lai, <span class="author-me">Chen Zhang</span>, Yansong Feng, Quzhe Huang, Dongyan Zhao <br>
-                [<a href="https://aclanthology.org/2021.findings-acl.85.pdf">paper</a>] [<a
-                    href="https://github.com/luciusssss/why-learn-shortcut">code</a>] <br>
-                <span class="lang-info">English</span>
+                <span class="pub-title">Not All Data Augmentation Works: A Typology-Aware Study for Low-Resource Neural Machine Translation in Vietnamese Ethnic Minority Languages</span>
+                <span class="pub-venue">AAAI 2026 Workshop · LM4UC</span><br>
+                Long Nguyen, Dat T. Truong, <b>Nhan D. Tran</b>, Quynh Vo, Quy Tran Nguyen and Tho Quan<br>
+                [<a href="https://openreview.net/forum?id=XziOk4BTfv#discussion" target="_blank" rel="noopener">paper</a>]
             </div>
         </div>
 
         <div id="activities" class="tab-content">
-            <section-title>Academic Service</section-title>
-            <ul>
-                <li><b>Area Chair:</b> ACL Rolling Review, LREC</li>
-                <li><b>Reviewer:</b> ACL Rolling Review (Great Reviewer x3), *ACL, LREC, COLING, NLPCC (Best
-                    Reviewer Award 2025), NeurIPS, AAAI </li>
-                <li><b>Workshop Organizer:</b> <a href="https://winlp-workshop.github.io/" target="_blank">WiNLP 2025 & 2026</a></li>
-                <li><b>Session Chair:</b> ACL 2026</li>
-                <li><b>Student Volunteer:</b> EMNLP 2021, ACL 2024 & 2025 </li>
-            </ul>
-
             <section-title>Open-Source Artifacts</section-title>
             <ul>
-                <li><b>ZhuangBench:</b> A benchmark consisting of a small set of Zhuang–Chinese parallel sentences and a
-                    Zhuang dictionary, designed to evaluate whether LLMs can comprehend an unseen language on the fly.
-                    Now part of <a href="https://longbench2.github.io/">LongBench v2</a>.<br>[<a
-                        href="https://github.com/luciusssss/ZhuangBench">github</a>] [<a
-                        href="https://aclanthology.org/2024.findings-acl.519.pdf">paper</a>]</li>
-                <li><b>ZhuangRules:</b> A collection of Zhuang grammar rules for evaluating whether LLMs can effectively
-                    leverage grammar books in low-resource language understanding. <br>
-                    [<a href="https://github.com/Infinite-set/ZhuangRules">github</a>] [<a
-                        href="https://aclanthology.org/2025.acl-long.202.pdf">paper</a>]</li>
-                <li><b>MC<sup>2</sup>:</b> A web-crawled corpus covering four minority languages in China:
-                    Tibetan, Uyghur, Kazakh, and Mongolian.<br>
-                    [<a href="https://github.com/luciusssss/mc2_corpus">github</a>] [<a
-                        href="https://huggingface.co/datasets/pkupie/mc2_corpus">huggingface</a>] [<a
-                        href="https://aclanthology.org/2024.acl-long.479.pdf">paper</a>]</li>
-                <li><b>MiLiC-Eval:</b> A multi-task evaluation benchmark for four minority languages in China: Tibetan,
-                    Uyghur, Kazakh, and Mongolian. Portions of the data have been contributed to <a href="https://huggingface.co/datasets/openlanguagedata/flores_plus">FLORES+</a> to support alternative scripts.<br>
-                    [<a href="https://github.com/luciusssss/MiLiC-Eval">github</a>] [<a
-                        href="https://huggingface.co/datasets/pkupie/milic-eval">huggingface</a>] [<a
-                        href="https://aclanthology.org/2025.findings-acl.578.pdf">paper</a>]</li>
-                <li><b>Lawyer LLaMA:</b> A Chinese legal-domain LLM based on Llama 2 trained on synthetic data of legal consultations.<br>
-                    [<a href="https://github.com/AndrewZhe/lawyer-llama">github</a>] [<a href="https://huggingface.co/pkupie/lawyer-llama-13b-v2">huggingface</a>] [<a
-                        href="https://arxiv.org/pdf/2305.15062.pdf">report</a>]</li>
-
+                <li><b>MorpheL:</b> A morphology-aware tokenizer adaptation method for multilingual models, with code and reproducibility artifacts released for the SOICT 2026 paper.<br>
+                    [<a href="https://github.com/HeyDunaX/MorpheL" target="_blank" rel="noopener">GitHub</a>] [<a href="./proj/morphel.html">project website</a>]</li>
             </ul>
 
-            <section-title>Teaching</section-title>
-            <p><b>Teaching Assistant @ Peking University</b></p>
+            <section-title>Honors &amp; Awards</section-title>
             <ul>
-                <li>Foundations of Natural Language Processing (Spring 2024, 2025, 2026)</li>
-                <li>Empirical Methods for Natural Language Processing (Spring 2022)</li>
-                <li>Data Structures and Algorithms (B) (Fall 2020, Spring 2021)</li>
+                <li><b>First Prize, Regional Round</b>, 31st National Youth Informatics Contest, Table D3 (2025), Center for Science, Technology and Young Talent Development.</li>
+                <li><b>Encouragement Prize, National Final Round</b>, 31st National Youth Informatics Contest, Table D3 (2025), Central Youth Union.</li>
+                <li><b>Second Prize</b>, 34th Ho Chi Minh City Youth Informatics Contest, Table D3 (2025), Ho Chi Minh City Youth Union.</li>
+                <li><b>Second Prize</b>, Ho Chi Minh City Science and Engineering Fair, Software Systems category (2025), Department of Education and Training of Ho Chi Minh City.</li>
+                <li><b>Bronze Medal</b>, 13th Ho Chi Minh City Design, Fabrication and Application Competition, Table A (2025), Ho Chi Minh City Youth Union.</li>
+                <li><b>Bronze Medal</b>, 11th Ho Chi Minh City Design, Fabrication and Application Competition (2023), awarded in 2024 by the Ho Chi Minh City Youth Union.</li>
             </ul>
-
-            <section-title>Honors & Awards</section-title>
-            <ul>
-                <li><b>Outstanding Graduate (北京大学优秀毕业生)</b>, Peking University (2021, 2026)</li>
-                <li><b>President Scholarship (校长奖学金)</b>, Peking University (2025)</li>
-                <li><b>Award for Scientific Research (优秀科研奖)</b>, Peking University (2024)</li>
-                <li><b>Outstanding Graduate of Beijing (北京市优秀毕业生)</b>, Beijing Municipal Education Commission (2021)
-                </li>
-                <!-- <li><b>Best Project</b>, Google ML Winter Camp (2020) [<a
-                        href="https://sites.google.com/google.com/ml-camp/2020-camp/beijing-site/winning-teams">link</a>]
-                </li> -->
-                <li><b>Founder Scholarship (方正奖学金)</b>, Peking University (2018, 2019)</li>
-            </ul>
-
         </div>
 
-        <div id="misc" class="tab-content">
-            <ul>
-                <li>My name in Chinese characters is <b>张晨 (Zhāng Chén, /ʈʂɑŋ˥˥ ʈʂʰən˧˥/)</b>. My given name 晨 (Chén)
-                    means <i>morning</i>.</li>
-                <li>My mother tongue is the <b>Jinsha Dialect (金沙话)</b>, a transitional dialect between Mandarin and Wu
-                    Chinese.</li>
-                <li>Intermediate in
-                    Japanese and Spanish; basic knowledge of Korean, German, and Uzbek.</li>
-                <li>I enjoy hiking, learning new languages, and exploring craft beers (especially IPAs). If you visit Beijing, I'd be happy to plan a great day hiking in the nearby hills and introduce you to some excellent local taprooms.</li>
-            </ul>
-
-        </div>
-
-        <footer>
-            &copy; 2026 Chen Zhang.
-        </footer>
+        <footer>&copy; 2026 Nhan Duy Tran.</footer>
     </div>
 
     <script>
-        // Tab 控制逻辑
         function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-
-            // 移动端切换 Tab 后滚动到 Tab 栏位置
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(button => button.classList.remove('active'));
+            document.getElementById(tabName).style.display = 'block';
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
             if (window.innerWidth < 768) {
                 window.scrollTo({ top: document.querySelector('.tabs-nav').offsetTop - 10, behavior: 'smooth' });
             }
         }
 
-        // 回到顶部按钮逻辑
-        let mybutton = document.getElementById("backToTop");
-
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
+        const backToTop = document.getElementById('backToTop');
+        window.onscroll = () => {
+            backToTop.style.display = document.documentElement.scrollTop > 0 ? 'block' : 'none';
+        };
         function topFunction() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 主题切换逻辑
-const themeToggle = document.getElementById('theme-toggle');
-const sunIcon = document.getElementById('sun-icon');
-const moonIcon = document.getElementById('moon-icon');
-
-// 检查本地存储或系统偏好
-const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    sunIcon.style.display = 'block';
-    moonIcon.style.display = 'none';
-}
-
-themeToggle.addEventListener('click', () => {
-    let theme = document.documentElement.getAttribute('data-theme');
-    if (theme === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
-    }
-});
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const savedTheme = localStorage.getItem('profile-theme');
+        if (savedTheme !== 'light') document.documentElement.setAttribute('data-theme', 'dark');
+        function updateThemeIcon() {
+            const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+            sunIcon.style.display = dark ? 'block' : 'none';
+            moonIcon.style.display = dark ? 'none' : 'block';
+        }
+        updateThemeIcon();
+        themeToggle.addEventListener('click', () => {
+            const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (dark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('profile-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('profile-theme', 'dark');
+            }
+            updateThemeIcon();
+        });
     </script>
-
 </body>
-
 </html>
