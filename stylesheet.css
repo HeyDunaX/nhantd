@@ -325,7 +325,7 @@ li {
 .news-scroller {
   position: relative;
   width: 100%;
-  max-height: 10.5rem;
+  max-height: 16rem;
   overflow-y: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
